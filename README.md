@@ -1,5 +1,4 @@
 # bamboo
-![image](https://www.mcjiaozi.icu/favicon.ico)
 * 中文名:遇见竹子
 ## 开发者
 * 该程序由 我(MCjiaozi) 开发。
