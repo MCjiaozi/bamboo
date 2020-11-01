@@ -1,7 +1,7 @@
 # bamboo
 * 中文名:遇见竹子
 
-![LOGO](https://www.mcjiaozi.icu/favicon.ico)
+![LOGO](https://raw.githubusercontent.com/MCjiaozi/bamboo/main/favicon.ico)
 ## 开发者
 * 该程序由 我(MCjiaozi) 开发。
 * [我的网站](https://www.mcjiaozi.icu) *Simplified Chinese*。
