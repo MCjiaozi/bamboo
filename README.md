@@ -3,8 +3,8 @@
 * 中文名:遇见竹子
 ## 开发者
 * 该程序由 我(MCjiaozi) 开发。
-* [我的网站](https://www.mcjiaozi.icu)**Simplified Chinese**。
-* [该程序的发布网站](https://www.mcjiaozi.icu/download/software/bamboo/)*Simplified Chinese*。
+* [我的网站](https://www.mcjiaozi.icu) *Simplified Chinese*。
+* [该程序的发布网站](https://www.mcjiaozi.icu/download/software/bamboo/) *Simplified Chinese*。
 
   当然，您仍可以在Github获取编译好的程序。
 ## 开发目的
