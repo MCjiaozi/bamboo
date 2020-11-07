@@ -17,7 +17,7 @@ using namespace std;//URLDownloadToFile
 void update()
 {
 	DeleteUrlCacheEntry(_T("https://www.mcjiaozi.icu/update/bamboo/preview/version.txt"));
-	if (S_OK != URLDownloadToFile(NULL, _T("https://www.mcjiaozi.icu/update/bamboo/version.txt"), _T("version.txt"), 0, 0)) {
+	if (S_OK != URLDownloadToFile(NULL, _T("https://www.mcjiaozi.icu/update/bamboo/preview/version.txt"), _T("version.txt"), 0, 0)) {
 		MessageBox(NULL, _T("检查更新失败！\n请前往在线更新网站！"), _T("错误"), MB_OK | MB_ICONERROR);
 	}
 	FILE* fp = fopen("version.txt", "r");//从缓存读取版本号
@@ -33,12 +33,12 @@ void update()
 	if (ch > 53) {
 		int updateaa = MessageBox(NULL, _T("有新版本可用，要更新吗？\n点击确定下载将开始。"), _T("检查更新"), MB_OKCANCEL | MB_ICONQUESTION);
 		if (updateaa == IDOK) {
-			DeleteUrlCacheEntry(_T("https://www.mcjiaozi.icu/download/software/bamboo/bamboo_installer.exe"));
-			if (S_OK != URLDownloadToFile(NULL, _T("https://www.mcjiaozi.icu/download/software/bamboo/bamboo_installer.exe"), _T("bamboo_installer.exe"), 0, 0)) {
+			DeleteUrlCacheEntry(_T("https://www.mcjiaozi.icu/download/software/bamboo/preview/bamboo_installer_pre.exe"));
+			if (S_OK != URLDownloadToFile(NULL, _T("https://www.mcjiaozi.icu/download/software/bamboo/preview/bamboo_installer_pre.exe"), _T("bamboo_installer_pre.exe"), 0, 0)) {
 				MessageBox(NULL, _T("下载更新失败！\n请前往在线更新网站！"), _T("错误"), MB_OK | MB_ICONERROR);
 				return;
 			}
-			ShellExecute(NULL, NULL, _T("cmd"), _T("/c copy bamboo_installer.exe %temp%\\bamboo\\bamboo_installer.exe&&del bamboo_installer.exe&&start %temp%\\bamboo\\bamboo_installer.exe"), NULL, SW_SHOW);
+			ShellExecute(NULL, NULL, _T("cmd"), _T("/c copy bamboo_installer_pre.exe %temp%\\bamboo\\bamboo_installer_pre.exe&&del bamboo_installer_pre.exe&&start %temp%\\bamboo\\bamboo_installer_pre.exe"), NULL, SW_SHOW);
 			return;
 		}
 		else if (updateaa == 0) {
@@ -95,7 +95,7 @@ int main()
 	settextstyle(&f);                     // 设置字体样式
 	settextcolor(BLACK);				//BLACK在graphic.h头文件里面被定义为黑色的颜色常量
 	drawtext("开源许可证", &R1, DT_CENTER | DT_VCENTER | DT_SINGLELINE);//在矩形区域R1内输入文字，水平居中，垂直居中，单行显示
-	drawtext("开源网站", &R2, DT_CENTER | DT_VCENTER | DT_SINGLELINE);//在矩形区域R2内输入文字，水平居中，垂直居中，单行显示
+	drawtext("Github开源", &R2, DT_CENTER | DT_VCENTER | DT_SINGLELINE);//在矩形区域R2内输入文字，水平居中，垂直居中，单行显示
 	drawtext("退出", &R3, DT_CENTER | DT_VCENTER | DT_SINGLELINE);//在矩形区域R3内输入文字，水平居中，垂直居中，单行显示
 	drawtext("检查更新", &R4, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 	drawtext("更新日志", &R5, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
